@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: Oswald;
+    max-width: 100%;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: auto;
+}
+
+nav li {
+    height: 10%;
+    height: 100px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-size: x-large;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(8px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
+
+.page1 {
+    background-image: url('Imgs/img1.jpg');
+    min-height: 100%;
+    position: relative;
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    max-height: 100vh;
+}
+
+.caption1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #ff523b;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #00000027;
+}
+
+.categories {
+    margin: 70px 0;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+}
+.row {
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+}
+
+.col-3:hover img {
+    scale: 1.2;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.col-4 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.col-4 img:hover, .offer-img:hover {
+    scale: 1.25;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555
+}
+
+.title::after {
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 505;
+    transform: translateX(-50%);
+}
+
+h4 {
+    color: #555;
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 14px;
+
+}
+
+.page4 {
+    background-image: url('Imgs/faq.jpg');
+    min-height: 100%;
+    position: relative;
+    opacity: 0.98;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+.page5 {
+    background-image: url('Imgs/feedback.png');
+    min-height: 100%;
+    position: relative;
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: white;
+    background: #ff523b;
+    padding: 15px 20px;
+    border-radius: 10px;
+    max-width: 96%;
+    margin: 0 50px;
+}
+
+.login-btn:hover {
+    background-color: #000000;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    border-radius: 30px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    border-radius: 30px;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #ff523b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 20%;
+    border-radius: 50%;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+  
+.feedback {
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.feedback {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.text-area .text-submit {
+    margin-top: 2rem;
+    width: 40%;
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #f44336;
+    color: white;
+    border: 0px;
+}
+
+.text-submit:hover {
+    background-color: #000;
+}
+.text-area-box {
+    border-radius: 10px;
+}
+
+.abt-cont {
+    align-items: center;
+    display: flex;
+    flex-basis: 50%;
+    padding-top: 7rem;
+    flex-direction: column;
+}
+
+.abt-intro {
+    text-align: center;
+    padding: 2rem;
+    background-color: bisque;
+    border-radius: 20px;
+    margin-left: 100px;
+    margin-bottom: 4rem;
+}
+
+.name {
+    text-align: center;
+    margin-left: 100px;
+    background-color: aliceblue;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+}
+
+.offer {
+    margin-bottom: 20px;
+}
+.offer-img {
+    width: 100%;
+    height: 120%;
+}
+
+.forum-ques ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30%;
+}
+
+.forum-ques ul li {
+    list-style: none;
+    padding: 20px;
+    font-size: 110%;
+}
+
+/* footer */
+.footer {
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+footer {
+    padding: 0 20px;
+    max-width: 200vh;
+}
+
+.follow-container ul {
+    list-style-type: none;
+    text-align: center;
+    color: black;
+}
+
+.follow-container ul li {
+    display: inline-block;
+    width: 10%;
+}
+
+.terms {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.sources {
+    text-align: right;
+}
